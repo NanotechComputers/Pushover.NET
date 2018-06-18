@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+        <PackageId>SendPush</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Kevin Deason</Authors>
+        <Company>Nanotech Computers</Company>
+        <ReleaseVersion>1.0.0</ReleaseVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\PushoverClient\PushoverClient.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.2.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.0" />
+    </ItemGroup>
+</Project>
