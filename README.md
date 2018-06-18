@@ -4,9 +4,9 @@
 
 ### Quick Start
 
-Install the [NuGet package](http://www.nuget.org/packages/PushoverNET/)
+Install the [NuGet package](http://www.nuget.org/packages/PushoverNET.Standard/)
 ```powershell
-Install-Package PushoverNET
+Install-Package PushoverNET.Standard
 ```
 
 Next, you will need to provide Pushover.NET with your API key in code.  Need help finding your API key?  Check here: https://pushover.net/faq
