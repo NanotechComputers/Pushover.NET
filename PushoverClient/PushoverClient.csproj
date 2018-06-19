@@ -2,7 +2,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>PushoverNET.Standard</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.1.0</Version>
         <Title>Pushover .NET Standard</Title>
         <Authors>Kevin Deason</Authors>
         <Company>Nanotech Computers</Company>
@@ -15,7 +15,7 @@
         <PackageOutputPath>$(SolutionDir)\dist\nuget\</PackageOutputPath>
         <RepositoryUrl>https://github.com/NanotechComputers/Pushover.NET</RepositoryUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <ReleaseVersion>1.0.0</ReleaseVersion>
+        <ReleaseVersion>1.1.0</ReleaseVersion>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="ServiceStack.Text.Core" Version="5.1.0"/>
