@@ -51,7 +51,15 @@ namespace SendPush
             {
                 //  Send the message
                 var pclient = new Pushover(options.From);
-                pclient.Push(options.Title, options.Message, options.User, "", !bool.Parse(options.Plaintext));
+                var option = new PushoverClient.Options
+                {
+                    Recipients = options.User,
+                    Priority = Priority.High,
+                    Notification = NotificationSound.SpaceAlarm,
+                    Html = true,
+                    Url = "http://www.google.com"
+                };
+                pclient.Push(options.Title, options.Message, option);
                 ReturnErrorCode = ExitCode.Success;
             }
 
