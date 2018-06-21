@@ -14,12 +14,16 @@ Next, you will need to provide Pushover.NET with your API key in code.  Need hel
 In your application, call:
 
 ```CSharp
-Pushover pclient = new Pushover("Your-apps-API-Key-here");
-PushResponse response = pclient.Push(
-              "Test title", 
-              "This is the test message.", 
-              "User-key-to-send-to-here"
-          );
+var pclient = new Pushover("Your-pushover-API-Key-here");
+var options = new PushoverClient.Options
+{
+    Recipients = "Your-pushover-user-here", //User, group or comma separated values
+    Priority = Priority.High,
+    Notification = NotificationSound.SpaceAlarm,
+    Html = true,
+    Url = "http://www.google.com"
+};
+pclient.Push("Message Title", "Message text", options);
 ```
 
 ### Examples
@@ -29,22 +33,27 @@ PushResponse response = pclient.Push(
 ```CSharp
 using PushoverClient;
 
-namespace ConsoleApplication1
+namespace ConsoleApplication
 {
-  class Program
-  {
-      static void Main(string[] args)
-      {
-          Pushover pclient = new Pushover("Your-apps-API-Key-here");
-
-          PushResponse response = pclient.Push(
-              "Test title", 
-              "This is the test message.", 
-              "User-key-to-send-to-here"
-          );
-      }
-  }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var pclient = new Pushover("Your-pushover-API-Key-here");
+            var options = new PushoverClient.Options
+            {
+                Recipients = "Your-pushover-user-here", //User, group or comma separated values
+                Priority = Priority.High,
+                Notification = NotificationSound.SpaceAlarm,
+                Html = true,
+                Url = "http://www.google.com"
+            };
+            pclient.Push("Message Title", "Message text", options);
+        }
+    }
 }
 ```
+
+Please see example console application for more info
 
 Converted from: https://github.com/danesparza/Pushover.NET
